@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prompt Example</title>
+</head>
+<body>
+
+    <h1>Click the button to open a prompt dialog</h1>
+    <button onclick="getUserInput()">Get Name</button>
+    <p id="output"></p>
+
+    <script>
+        function getUserInput() {
+            // This is the prompt function!
+            let name = prompt("Please enter your name:", "Guest");
+
+            const outputElement = document.getElementById("output");
+
+            if (name !== null && name !== "") {
+                outputElement.textContent = "Hello, " + name + "! Welcome.";
+            } else {
+                outputElement.textContent = "No name was entered.";
+            }
+        }
+    </script>
+
+</body>
+</html>
